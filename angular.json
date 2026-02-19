@@ -1,0 +1,34 @@
+{
+  "project": {
+    "name": "ecommerce-frontend",
+    "root": "./",
+    "sourceRoot": "src",
+    "projectType": "application",
+    "architect": {
+      "build": {
+        "builder": "@angular-devkit/build-angular:browser",
+        "options": {
+          "outputPath": "dist/ecommerce-frontend",
+          "index": "src/index.html",
+          "main": "src/main.ts",
+          "polyfills": "src/polyfills.ts",
+          "tsConfig": "tsconfig.app.json",
+          "assets": [
+            "src/favicon.ico",
+            "src/assets"
+          ],
+          "styles": [
+            "src/styles.css"
+          ],
+          "scripts": []
+        }
+      },
+      "serve": {
+        "builder": "@angular-devkit/build-angular:dev-server",
+        "options": {
+          "browserTarget": "ecommerce-frontend:build"
+        }
+      }
+    }
+  }
+}
